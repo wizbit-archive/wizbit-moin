@@ -1,0 +1,13 @@
+All of our development is currently hosted on git.codethink.co.uk
+
+=== wizbit ===
+FIXME: What exactly *is* here :-P
+{{{
+git clone git://git.codethink.co.uk/git/wizbit
+}}}
+
+=== libgitcore ===
+This is our current DVCS engine.
+{{{
+git clone git://git.codethink.co.uk/git/git
+}}}
