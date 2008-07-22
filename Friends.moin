@@ -1,0 +1,5 @@
+Wizbit is nothing without the platform on which its built. So heres some of the stuff we are using to bring the blinding future to your desktop, and how we integrate with it or plan to integrate with it.
+
+ * [:Friends/Git:Git]
+ * [:Friends/Conduit:Conduit]
+ * [:Friends/GVFS:GVFS]
