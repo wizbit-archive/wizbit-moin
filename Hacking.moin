@@ -1,7 +1,7 @@
 All of our development is currently hosted on git.codethink.co.uk
 
 === wizbit ===
-FIXME: What exactly *is* here :-P
+This is where we are currently doing most of our work, to provide GVFS/Posix interfaces to our file stores and to provide a nice API for people wanted to do Cool Stuff with the file stores.
 {{{
 git clone git://git.codethink.co.uk/git/wizbit
 }}}
