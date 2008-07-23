@@ -1,7 +1,7 @@
 All of our development is currently hosted on git.codethink.co.uk
 
 === wizbit ===
-This is where we are currently doing most of our work, to provide GVFS/Posix interfaces to our file stores and to provide a nice API for people wanted to do Cool Stuff with the file stores.
+This is where we are currently doing most of our work, to provide GVFS/Posix interfaces to our file stores and to provide a nice API for people wanting to do Cool Stuff with the file stores.
 
 You can browse the source in [http://git.codethink.co.uk/?p=wizbit;a=summary gitweb.]
 
