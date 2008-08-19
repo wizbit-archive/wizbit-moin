@@ -1,0 +1,5 @@
+= Roadmap =
+
+|| ''' Component ''' || Purpose || Status ||
+|| Wizbit Store || Provide a backing store for holding Wizbit Objects || In development ||
+|| Metadata Store || Provide a store for holding file metadata || Not yet started ||
