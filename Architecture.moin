@@ -6,7 +6,7 @@
 
 == Wizbit Repository ==
 
-'''Possibly rename to wizbit store'''
+''Possibly rename to wizbit store''
 
 API for accessing the wizbit repository, implements both Wizbit Object and Wizbit Reference.
 
@@ -14,7 +14,7 @@ API for accessing the wizbit repository, implements both Wizbit Object and Wizbi
 
 API for accessing files by their URI and version.
 
-'''Currently there are two implementations which are both incomplete'''
+''Currently there are two implementations which are both incomplete''
 
 === Wizbit Reference ===
 
