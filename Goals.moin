@@ -1,11 +1,21 @@
-The user experience should be that their data is everywhere. The same store should be on each device. Perhaps there will be different views - your media player only sees media files, and your desktop sees everything, but it should still be the same file store.
+With our data distributed among many devices, on many different kinds of file systems it's important to the user to be able to maintain coherence. It's also important to be able to maintain a log of what has changed, when and how it was changed and interestingly by who.
 
-So we need a distributed file system. And this file system must be fully usable when offline. And it needs to cope with conflicting changes.
+[[TableOfContents]]
 
-== Conflict Handling ==
-Most existing distributed file systems don't allow conflicts - so no disconnected operation is possible. Those that do resolve conflicts by complicated and error prone rules when the system syncs.
+== Synchronisation and Conflict Handling ==
 
-We will build the conflict resolution into the applications, as only the applications fully appreciate their data format. This also means we don't interrupt someones workflow by forcing them to merge at an inappropriate time.
+Most existing distributed file systems don't allow conflicts - so no disconnected operation is possible. Those that do, resolve conflicts by complicated and error prone rules when the system synchronises. This means that the user must be aware of and know how to correct errors which occur as a result of the synchronisation process. 
+
+Conversely a distributed version control system is capable of resolving conflicts in textual documents reasonably easily be it structured in XML, C or just plain text. Branching and merging are two of the most important features of DVCS and they're also the basis of what we need in order to achieve a distributed file system that enhances the user experience across all of their devices. 
+
+There is of course one final issue which needs resolving. What if the data formats aren't textual? For instance, what if you have a GIMP Image (XCF) which has many layers, you then edit one copy of the document modifying one layer on your desktop computer, and modify a copy of the document on your laptop computer adding a new layer? In this case we will build the conflict resolution into the applications providing a set of tools which the application can use to interrogate different versions of the file, as only the applications fully appreciate their data format. This also means we don't interrupt someone's work flow by forcing them to merge at an inappropriate time. 
+
+== Continuous backup ==
+
+The backup problem has been fixed in many ways in the past, however it has always been a difficult issue to solve effectively. If we look at [http://www.apple.com/macosx/features/timemachine.html Apple's time machine] for instance we see that it's capable of doing a lot of what we'd expect from a backup system, and it achieves this in a fairly brilliant way. However it doesn't account for the subtlety of changes, changes themselves are tracked as duplicates of changed documents. The changes are sent off to either an external hard disk or [http://www.apple.com/timecapsule/ time capsule].
+
+So lets look at a DVCS as a backup solution, our changes are tracked as individual 'change sets' we therefore have the ability to cherry pick our backup restores, consider each change set as an atomic object which can be joined into or removed from the current active version. Of course we can still duplicate this DVCS file system on an external device for data security or push it off onto the web or store our data in a 'cloud' of replicators for added security. 
 
 == Collaboration ==
-If we fix conflict handling, we get free collaboration tools too!
+
+With Wizbit we get collaboration tools for free! For different file formats, across many different devices and across networks.
