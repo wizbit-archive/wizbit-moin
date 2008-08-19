@@ -7,7 +7,7 @@ You can join the mailing (or just browse the archives) [http://lists.codethink.c
 You can find us in #wizbit on irc.gnome.org
 
 
-=== Wizbit ===
+== Wizbit ==
 This is where we are currently doing most of our work, to provide GVFS/Posix interfaces to our file stores and to provide a nice API for people wanting to do Cool Stuff with the file stores.
 
 You can browse the source in [http://git.codethink.co.uk/?p=wizbit;a=summary gitweb.]
@@ -17,7 +17,7 @@ To checkout:
 git clone git://git.codethink.co.uk/git/wizbit
 }}}
 
-=== libgitcore ===
+== libgitcore ==
 This is our current DVCS engine. ''(Defunct)''
 
 You can browse the source in [http://git.codethink.co.uk/?p=libgitcore;a=summary gitweb.]
