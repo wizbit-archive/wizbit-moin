@@ -6,18 +6,40 @@
 
 == Wizbit Repository ==
 
+'''Possibly rename to wizbit store'''
+
+API for accessing the wizbit repository, implements both Wizbit Object and Wizbit Reference.
+
 === Wizbit Object ===
+
+API for accessing files by their URI and version.
+
+'''Currently there are two implementations which are both incomplete'''
 
 === Wizbit Reference ===
 
+API for accessing a list of tips?
+
 == Wizbit File System ==
+
+A Wizbit abstraction layer for accessing a wizbit repository as a file system
 
 === Wizbit FUSE ===
 
+A FUSE plugin for accessing Wizbit stores
+
 === Wizbit GVFS ===
+
+A GVFS plugin for accessing Wizbit stores
 
 === Wizbit On FAT32 ===
 
+A C library for accessing a wizbit store in a way compatible with FAT32 
+
 == Wizbit Metadata ==
 
+A storage point for file metadata, supplimentary data for files.
+
 == Wizbit Relationships ==
+
+Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
