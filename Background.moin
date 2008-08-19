@@ -43,4 +43,6 @@ Commercial sucks. The others have limited data types, lots of potential failure 
 Kinda of easy, apart from
 
  * Files are not automatically backed up
- * No good GUI
+ * Backups are stored as entire copies of earlier versions of documents
+ * Some backup solutions will store a backup even if an existing backup is present and the next backup hasn't changed
+ * User interfaces fail to allow the user to manipulate their backups and restores with the granularity that is required in many instances.
