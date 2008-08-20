@@ -26,15 +26,15 @@ A repository object is used to access Wizbit Objects and contains a single Wizbi
 
 A storage point for file meta-data, supplimentary data for files. The structure of the meta-data is undecided. The meta-data should probably be stored in the Wizbit repo along with regular file data, athough the exact storage method is still unknown.
 
+== Wizbit Relationships ==
+
+Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
+
 == Wizbit File System ==
 
 A Wizbit abstraction layer for accessing a wizbit repository.
 
 Accessing files by UUID isn't pleasant, the file system abstractions build upon the UUID based file systems to provide better access methods. The initial abstraction is a POSIX re-implementation.
-
-== Wizbit Relationships ==
-
-Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
 
 === Wizbit FUSE ===
 
