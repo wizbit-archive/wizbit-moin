@@ -6,7 +6,7 @@
 
 The core of Wizbit is a UUID-based versioned file system. One of the core goals of Wizbit is freedom to work on multiple devices, and as such the Wizbit core also includes synchronization functionality. The core of Wizbit is implemented using the following modules.
 
-==== Wizbit Object ====
+=== Wizbit Object ===
 
 The Wizbit object represents a particular version or snapshot of a file. The API for accessing a Wizbit object is a basic stream API.
 
