@@ -46,6 +46,6 @@ A GVFS plugin for accessing Wizbit stores
 
 = Definition of Terms =
 
- * '''Tip''' - A branch
- * '''UUID''' - Universal Unique IDentifier 
+ * '''Tip''' - An un-named branch, essentially a collection of commits
+ * '''UUID''' - Universal Unique IDentifier
  * '''Head''' - The currently checked-out version
