@@ -12,15 +12,15 @@ The Wizbit object represents a particular version or snapshot of a file. The API
 
 ''Currently there are two implementations which are both incomplete''
 
+=== Wizbit Reference ===
+
+The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID. (The currently checked-out version)
+
 === Wizbit Repository ===
 
 ''Possibly rename to wizbit store''
 
 A repository object is used to access Wizbit Objects and contains a single Wizbit Reference object. The Wizbit repository object knows about the directory structure of a Wizbit repository, such as where the versioned file data exists, and where the reference data is located.
-
-=== Wizbit Reference ===
-
-The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID. (The currently checked-out version)
 
 == Wizbit Meta-data ==
 
@@ -32,6 +32,10 @@ A Wizbit abstraction layer for accessing a wizbit repository.
 
 Accessing files by UUID isn't pleasant, the file system abstractions build upon the UUID based file systems to provide better access methods. The initial abstraction is a POSIX re-implementation.
 
+== Wizbit Relationships ==
+
+Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
+
 === Wizbit FUSE ===
 
 A FUSE plugin for accessing Wizbit stores
@@ -39,7 +43,3 @@ A FUSE plugin for accessing Wizbit stores
 === Wizbit GVFS ===
 
 A GVFS plugin for accessing Wizbit stores
-
-== Wizbit Relationships ==
-
-Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
