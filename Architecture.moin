@@ -4,25 +4,33 @@
 
 == Overview ==
 
-== Wizbit Repository ==
+The core of Wizbit is a UUID-based versioned file system. One of the core goals of Wizbit is freedom to work on multiple devices, and as such the Wizbit core also includes synchronization functionality. The core of Wizbit is implemented using the following modules.
 
-''Possibly rename to wizbit store''
+==== Wizbit Object ====
 
-API for accessing the wizbit repository, implements both Wizbit Object and Wizbit Reference.
-
-=== Wizbit Object ===
-
-API for accessing files by their URI and version.
+The Wizbit object represents a particular version or snapshot of a file. The API for accessing a Wizbit object is a basic stream API.
 
 ''Currently there are two implementations which are both incomplete''
 
+=== Wizbit Repository ===
+
+''Possibly rename to wizbit store''
+
+A repository object is used to access Wizbit Objects and contains a single Wizbit Reference object. The Wizbit repository object knows about the directory structure of a Wizbit repository, such as where the versioned file data exists, and where the reference data is located.
+
 === Wizbit Reference ===
 
-API for accessing a list of tips?
+The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID. (The currently checked-out version)
+
+== Wizbit Meta-data ==
+
+A storage point for file meta-data, supplimentary data for files. The structure of the meta-data is undecided. The meta-data should probably be stored in the Wizbit repo along with regular file data, athough the exact storage method is still unknown.
 
 == Wizbit File System ==
 
-A Wizbit abstraction layer for accessing a wizbit repository as a file system
+A Wizbit abstraction layer for accessing a wizbit repository.
+
+Accessing files by UUID isn't pleasant, the file system abstractions build upon the UUID based file systems to provide better access methods. The initial abstraction is a POSIX re-implementation.
 
 === Wizbit FUSE ===
 
@@ -31,14 +39,6 @@ A FUSE plugin for accessing Wizbit stores
 === Wizbit GVFS ===
 
 A GVFS plugin for accessing Wizbit stores
-
-=== Wizbit On FAT32 ===
-
-A C library for accessing a wizbit store in a way compatible with FAT32 
-
-== Wizbit Metadata ==
-
-A storage point for file metadata, supplimentary data for files.
 
 == Wizbit Relationships ==
 
