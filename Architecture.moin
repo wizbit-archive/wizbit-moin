@@ -14,7 +14,7 @@ The Wizbit object represents a particular version or snapshot of a file. The API
 
 === Wizbit Reference ===
 
-The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID. (The currently checked-out version)
+The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID.
 
 === Wizbit Repository ===
 
@@ -43,3 +43,9 @@ A FUSE plugin for accessing Wizbit stores
 === Wizbit GVFS ===
 
 A GVFS plugin for accessing Wizbit stores
+
+= Definition of Terms =
+
+ * '''Tip''' - A branch
+ * '''UUID''' - Universal Unique IDentifier 
+ * '''Head''' - The currently checked-out version
