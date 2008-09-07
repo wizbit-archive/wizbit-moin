@@ -4,18 +4,18 @@
 #pragma section-numbers off
 = Wizbit =
 
-We have a [:Background:problem]. Our data is everywhere, and its not always the same. Over time we end up with out of date copies, forked documents and lost copies and sometimes we wish we could just rewind to how our thesis looked last night. Wizbit intends to provide the features and functionality of a [http://en.wikipedia.org/wiki/Distributed_revision_control Distributed Version Control System] as one part of a new kind of file system. This new kind of file system will incorporate features and functionality which should solve all our data management problems.
+We have a [[Background|problem]]. Our data is everywhere, and its not always the same. Over time we end up with out of date copies, forked documents and lost copies and sometimes we wish we could just rewind to how our thesis looked last night. Wizbit intends to provide the features and functionality of a [[http://en.wikipedia.org/wiki/Distributed_revision_control|Distributed Version Control System]] as one part of a new kind of file system. This new kind of file system will incorporate features and functionality which should solve all our data management problems.
 
 == Index ==
- * [:Background:]
- * [:Goals:]
- * [:Roadmap:]
- * [:Hacking:Getting involved]
- * [:Architecture:]
+ * [[Background]]
+ * [[Goals]]
+ * [[Roadmap]]
+ * [[Hacking|Getting involved]]
+ * [[Architecture]]
 
 == GUADEC 2008 ==
 
 === Slides ===
 
- * attachment:GuadecWizbitTalk.odp
- * attachment:GuadecWizbitTalk.pdf
+ * [[attachment:GuadecWizbitTalk.odp]]
+ * [[attachment:GuadecWizbitTalk.pdf]]
