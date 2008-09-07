@@ -1,6 +1,6 @@
 With our data distributed among many devices, on many different kinds of file systems it's important to the user to be able to maintain coherence. It's also important to be able to maintain a log of what has changed, when and how it was changed and interestingly by who.
 
-[[TableOfContents]]
+<<TableOfContents>>
 
 == Synchronisation and Conflict Handling ==
 
@@ -12,7 +12,7 @@ There is of course one final issue which needs resolving. What if the data forma
 
 == Continuous backup ==
 
-The backup problem has been fixed in many ways in the past, however it has always been a difficult issue to solve effectively. If we look at [http://www.apple.com/macosx/features/timemachine.html Apple's time machine] for instance we see that it's capable of doing a lot of what we'd expect from a backup system, and it achieves this in a fairly brilliant way. However it doesn't account for the subtlety of changes, changes themselves are tracked as duplicates of changed documents. The changes are sent off to either an external hard disk or [http://www.apple.com/timecapsule/ time capsule].
+The backup problem has been fixed in many ways in the past, however it has always been a difficult issue to solve effectively. If we look at [[http://www.apple.com/macosx/features/timemachine.html|Apple's time machine]] for instance we see that it's capable of doing a lot of what we'd expect from a backup system, and it achieves this in a fairly brilliant way. However it doesn't account for the subtlety of changes, changes themselves are tracked as duplicates of changed documents. The changes are sent off to either an external hard disk or [[http://www.apple.com/timecapsule/|time capsule]].
 
 So lets look at a DVCS as a backup solution, our changes are tracked as individual 'change sets' we therefore have the ability to cherry pick our backup restores, consider each change set as an atomic object which can be joined into or removed from the current active version. Of course we can still duplicate this DVCS file system on an external device for data security or push it off onto the web or store our data in a 'cloud' of replicators for added security. 
 
