@@ -17,6 +17,8 @@ To checkout:
 git clone git://git.codethink.co.uk/git/wizbit
 }}}
 
+Standard autotools affair. You can install this in /opt or in /usr/local/stow/wizbit or you can just set LD_LIBRARY_PATH to $(top_builddir)/libwizbit/.libs/. (That shell expansion is for you to do in your head..).
+
 == Tomboy ==
 Tomboy is currently our main test case for experimenting with APIs and deciding on how everything is going to fit together. The latest code is available at bzr-playground.
 
@@ -26,6 +28,13 @@ bzr branch http://bzr-playground.gnome.org/~johncarr/tomboy/trunk
 }}}
 
 This code will compile without libwizbit.so, but will need it to be able to run. This branch of tomboy is completely disconnected from the normal file store so shouldnt eat your notes. But vanilla tomboy will need to be closed before you can try out wizbit tomboy. Any core dumps when exiting tomboy are completely not my fault, it was already doing that :-\
+
+Tomboy can be run uninstalled with "make run":
+{{{
+./autogen.sh
+make
+make run
+}}}
 
 == libgitcore ==
 This is now defunct. We were originally planning to use a refactored git as our DVCS engine. For various reasons, we have chosen to reinvent the wheel in the form of a hexagon.
