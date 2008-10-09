@@ -33,7 +33,7 @@ These all lead to fail. They are Application specific, don't allow offline colla
 
  * OpenSync
  * Conduit
- * Commerical solutions - allwaysync, GoodSync
+ * Commercial solutions - allwaysync, GoodSync
  * iTunes
 
 Commercial sucks. The others have limited data types, lots of potential failure cases or just suffer from the fact that *good* two way sync is hard.
