@@ -40,7 +40,7 @@ Commercial sucks. The others have limited data types, lots of potential failure 
 
 == Doing Backup Now ==
 
-Kinda of easy, apart from
+Kinda easy, apart from
 
  * Files are not automatically backed up
  * Backups are stored as entire copies of earlier versions of documents
