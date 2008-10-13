@@ -1,0 +1,24 @@
+= Ideas =
+
+This is a place to put together all the crazy ideas.
+
+== Future structured filesystem ==
+
+Using uri's like wizbit://UUID and wizbit://UUID#revision you can use Bits as a subject or object in an RDF graph.
+
+example: standard heirarchical representation
+
+<abstract://my_organised_files> <rdfs:type> <nfo:Folder>
+<abstract://my_organised_files> <dc:title> "My Organised Files"
+<wiz://FDEA768768DAB87F> <nfo:belongsToContainer> <abstract://my_organised_files>
+<wiz://FDEA768768DAB87F> <dc:title> "Document 1"
+
+<wiz://FA768D876AB87FAA> <nfo:belongsToContainer> <abstract://my_organised_files>
+<wiz://FA768D876AB87FAA> <dc:title> "Document 2"
+
+<abstract://my_organised_files/important_stuff> <rdfs:type> <nfo:Folder>
+<abstract://my_organised_files/important_stuff> <dc:title> "Important Stuff"
+
+<wiz://FDEA768768DAB87F> <nfo:belongsToContainer> <abstract://my_organised_files/important_stuff>
+<wiz://FDEA768768DAB87F#deadbeefdeadbeef> <dc:title> "Sales Results"
+<wiz://FDEA768768DAB87F#deadbeefdeadbeef> <dc:description> "The sales results on 10/04/08"
