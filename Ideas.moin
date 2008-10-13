@@ -21,8 +21,30 @@ example: standard hierarchical representation
 
 <virtual://6a984713-bce4-427c-be25-c891c818b87a> <rdfs:type> <nfo:Folder>
 <virtual://6a984713-bce4-427c-be25-c891c818b87a> <dc:title> "Important Stuff"
+<virtual://6a984713-bce4-427c-be25-c891c818b87a> <nfo:belongsToContainer> <virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583>
 
 <wiz://47aad80d-358a-4ddb-989b-70e9047fdf39> <nfo:belongsToContainer> <virtual://6a984713-bce4-427c-be25-c891c818b87a>
 <wiz://47aad80d-358a-4ddb-989b-70e9047fdf39#deadbeefdeadbeef> <dc:title> "Sales Results"
 <wiz://47aad80d-358a-4ddb-989b-70e9047fdf39#deadbeefdeadbeef> <dc:description> "The sales results on 10/04/08"
+}}}
+
+
+or a in a less concrete and and easier to read form... 
+
+{{{
+<virtual1> <rdfs:type> <nfo:Folder>
+<virtual1> <dc:title> "My Organised Files"
+<wiz1> <nfo:belongsToContainer> <virtual1>
+<wiz1> <dc:title> "Document 1"
+
+<wiz2> <nfo:belongsToContainer> <virtual1>
+<wiz2> <dc:title> "Document 2"
+
+<virtual2> <rdfs:type> <nfo:Folder>
+<virtual2> <dc:title> "Important Stuff"
+<virtual2> <nfo:belongsToContainer> <virtual1>
+
+<wiz3> <nfo:belongsToContainer> <virtual://6a984713-bce4-427c-be25-c891c818b87a>
+<wiz3> <dc:title> "Sales Results"
+<wiz3> <dc:description> "The sales results on 10/04/08"
 }}}
