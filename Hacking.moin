@@ -20,6 +20,9 @@ prefix = os.path.join(os.path.expanduser('~'), 'Projects', 'wizbit')
 checkoutroot = os.path.join(prefix, 'src')
 buildroot = os.path.join(prefix, 'tmp')
 
+# Skip broken modules, wizbit-python is especially borky
+# skip = ['gnio', 'wizbit-python']
+
 # gnio build system seems to choke on the --libdir argument.
 # so don't worry about $(prefix)/lib64 for our demo env.
 use_lib64 = False
