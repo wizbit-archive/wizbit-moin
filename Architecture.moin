@@ -4,48 +4,53 @@
 
 == Overview ==
 
-The core of Wizbit is a UUID-based versioned file system. One of the core goals of Wizbit is freedom to work on multiple devices, and as such the Wizbit core also includes synchronization functionality. The core of Wizbit is implemented using the following modules.
+The core of Wizbit is a UUID-based versioned data store. One of the core goals of Wizbit is freedom to work on multiple devices, and as such the Wizbit core also includes synchronization functionality. The core of Wizbit is implemented using the following modules.
 
-=== Wizbit Object ===
+=== Store ===
 
-The Wizbit object represents a particular version or snapshot of a file. The API for accessing a Wizbit object is a basic stream API.
+A Store is a place where Wizbit stores all of the data, there should be one Store for every Wizbit enabled device e.g. a computer, a handheld etc... The Store knows about the data stored within it, such as where the versioned file data exists.
 
-''Currently there are two implementations which are both incomplete''
+==== Todo ====
 
-=== Wizbit Reference ===
+ * '''Synchronisation''' - Syncing all of the Bits and their tips across two stores.
+ * '''Indexing and hierarchy?''' - Unsure about this one but maybe we need some over arching method of indexing the Bits in a Store. At the very least a list of all the Bits, but possibly including some kind of hierarchy of Bits, for instance TOMBOY/note, CALENDAR/appointment, FILES/file etc... 
+ 
+=== Bit ===
 
-The Reference object is used to map UUIDs to version references. The Wizbit repository can be thought of as a write-only, reference based file system. The Reference object at its simplest would be a mapping of UUID to the most recent version reference for this file. To allow merges and branches the mapping is not so simple. Each UUID maps to a list of 'tips' or leaves of the reference tree. There is also a 'Head' reference for each UUID.
+The Bit represents a data object and is referenced by a UUID, a data object can be a file, note, calendar entry, contact etc... Any form of data which would normally be stored as a file, or within a data store can be converted to a Bit or Bits. The Bit has a collection of '''Tips''' including the '''Primary Tip''' and a '''Root''' as well as many Wiz Versions in between.
 
-=== Wizbit Repository ===
+=== Version ===
 
-''Possibly rename to wizbit store''
+A Version is a revision of a Bit, every time a Bit changes a new Version is created. There are 4 kinds of Versions;
 
-A repository object is used to access Wizbit Objects and contains a single Wizbit Reference object. The Wizbit repository object knows about the directory structure of a Wizbit repository, such as where the versioned file data exists, and where the reference data is located.
+ * '''Root''' - The initial revision of a Bit. 
+ * '''Tips''' - A reference to the tip of a branch, essentially a pointer to a commit at the tip of a chain of commits, like a reflog in Git, all Tips can be traced back to the Root
+ * '''Primary Tip''' - The most recent Tip, when opening a Bit and reading from it, the Primary Tip would be the revision of the Bit opened first.
+ * '''Normal''' - An ordinary version somewhere between the Root and a Tip.
 
-== Wizbit Meta-data ==
+== Internal Architecture ==
 
-A storage point for file meta-data, supplimentary data for files. The structure of the meta-data is undecided. The meta-data should probably be stored in the Wizbit repo along with regular file data, athough the exact storage method is still unknown.
+=== Graphs ===
 
-== Wizbit Relationships ==
+Wizbit implements a graph system similar to the Git graph although missing a Tree object, the Wizbit graph consists of Commits and Blobs, the graph is internal to the architecture of Wizbit and will never be used by any application developers. The graph deals with how relationships between parents and children are managed, and the reading and writing of Versioned Blobs of data.
 
-Relationships are a form of metadata which identifies which files are related to one another within the wizbit store.
+----
+Image of graph will go here.
+----
 
-== Wizbit File System ==
+=== Commit Store ===
 
-A Wizbit abstraction layer for accessing a wizbit repository.
+A database which handles the graph data, storing the relationships between commits, the relationships consist of parents and children allowing us to move forward and backwards in the graph.
 
-Accessing files by UUID isn't pleasant, the file system abstractions build upon the UUID based file systems to provide better access methods. The initial abstraction is a POSIX re-implementation.
+==== Todo ====
 
-=== Wizbit FUSE ===
-
-A FUSE plugin for accessing Wizbit stores
-
-=== Wizbit GVFS ===
-
-A GVFS plugin for accessing Wizbit stores
+ * '''Security''' - it is important for the commit store to include some form of security which would allow us to;
+  * Verify the structure of the graph
+  * Ensure that the commit store itself has not become corrupted
 
 = Definition of Terms =
 
- * '''Tip''' - An un-named branch, essentially a collection of commits
  * '''UUID''' - Universal Unique IDentifier
- * '''Head''' - The currently checked-out version
+ * '''Head''' - The currently checked-out version, normally the master revision in a Store
+ * '''Commit''' - A version as it is committed to disk
+ * '''Blob''' - A binary large object of data (sometimes not so large :)), a blob is essentially the binary copy of a Version's data.
