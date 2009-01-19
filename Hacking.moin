@@ -50,7 +50,11 @@ git clone git://git.codethink.co.uk/git/wizbit
 
 Standard autotools affair. You can install this in /opt or in /usr/local/stow/wizbit or you can just set LD_LIBRARY_PATH to $(top_builddir)/libwizbit/.libs/. (That shell expansion is for you to do in your head..).
 
-To build wizbit you'll need vala 0.5.2 and gnome-common installed. As well as the usual Glib/GTK+ devel and cairo devel libraries. 
+To build wizbit you'll need vala 0.5.5 and gnome-common installed. As well as the usual Glib/GTK+ devel and cairo devel libraries. 
+
+A bunch of tests are located in the tests folder, this is essentially some example code, not 100% complete, but neither is wizbit.
+
+This includes test-widget which shows the timeline widget in action.
 
 == Tomboy ==
 Tomboy is currently our main test case for experimenting with APIs and deciding on how everything is going to fit together. The latest code is available at bzr-playground.
