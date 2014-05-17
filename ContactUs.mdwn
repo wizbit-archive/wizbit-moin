@@ -1,0 +1,10 @@
+
+
+## Mailing list
+
+You can join the mailing (or just browse the archives) [[here|http://lists.codethink.co.uk/cgi-bin/mailman/listinfo/wizbit]]. 
+
+
+## IRC
+
+You can find us in #wizbit on irc.gnome.org 

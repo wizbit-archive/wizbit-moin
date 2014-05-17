@@ -1,0 +1,35 @@
+
+
+# Wizbit
+
+We have a [[problem|Background]]. Our data is everywhere, and its not always the same. Over time we end up with out of date copies, forked documents and lost copies and sometimes we wish we could just rewind to how our thesis looked last night. Wizbit intends to provide the features and functionality of a [[Distributed Version Control System|http://en.wikipedia.org/wiki/Distributed_revision_control]] as one part of a new kind of file system. This new kind of file system will incorporate features and functionality which should solve all our data management problems. 
+
+
+## Index
+
+* [[Background|Background]] 
+* [[Goals|Goals]] 
+* [[Roadmap|Roadmap]] 
+* [[Getting involved|Hacking]] 
+* [[Architecture|Architecture]] 
+* [[Ideas|Ideas]] 
+
+## GUADEC 2008
+
+
+### Slides
+
+* [[GuadecWizbitTalk.odp|GuadecWizbitTalk.odp]] 
+* [[GuadecWizbitTalk.pdf|GuadecWizbitTalk.pdf]] 
+
+## GNOME Summit 2008
+
+
+### Slides
+
+* [[wizbit-slides.tar.gz|wizbit-slides.tar.gz]] - Slides are in svg format, notes in odt 
+
+## Videos
+
+* [[Wizbit Tomboy (ogg theora)|http://www.wine-doors.org/screens/wizbit.ogg]] - [[Related blog post|http://www.qdh.org.uk/wordpress/?p=242]] 
+* Wizbit Timeline, [[(YouTube)|http://www.youtube.com/watch?v=9W_h3SrgHAY]] [[(ogg theora)|http://www.wine-doors.org/screens/wizbit-timeline.ogv]] - [[Related blog post|http://www.qdh.org.uk/wordpress/?p=252]] 

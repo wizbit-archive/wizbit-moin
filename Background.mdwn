@@ -1,0 +1,50 @@
+
+[[!toc ]] 
+
+
+## The problem
+
+We all have lots of devices and places to put our data 
+
+* PC 
+* Tablet 
+* Laptop 
+* Palmtop 
+* Phone 
+* Web 2.0 
+* Tivos 
+* And more every day 
+All of these places have their own data stores. Your data is stored in different formats. You need to make decisions about what should be on what. You need to manually transfer your data around, and this may even be a manual process. Things get out of sync, especially if you are working on it with someone else. 
+
+So your collaboration just failed. Your sync just failed. And you don't know what is where, your backup just failed too. Oh dear. 
+
+
+## Doing Sharing Now
+
+* Flickr 
+* E-mailing different versions of stuff 
+* Shared drives 
+* Google docs 
+* Google file system (Wuala) 
+* SVN 
+* Bazaar/Git/DVCS 
+These all lead to fail. They are Application specific, don't allow offline collaboration or just are incredibly frustrating. Ever had to merge together 4 versions of the same Word document after sending them out for managerial review. Ouch ouch ouch. 
+
+
+## Doing Sync Now
+
+* [[OpenSync|OpenSync]] 
+* Conduit 
+* Commercial solutions - allwaysync, [[GoodSync|GoodSync]] 
+* iTunes 
+Commercial sucks. The others have limited data types, lots of potential failure cases or just suffer from the fact that *good* two way sync is hard. 
+
+
+## Doing Backup Now
+
+Kinda easy, apart from 
+
+* Files are not automatically backed up 
+* Backups are stored as entire copies of earlier versions of documents 
+* Some backup solutions will store a backup even if an existing backup is present and the next backup hasn't changed 
+* User interfaces fail to allow the user to manipulate their backups and restores with the granularity that is required in many instances. 

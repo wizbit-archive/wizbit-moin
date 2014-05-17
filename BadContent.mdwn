@@ -1,0 +1,6 @@
+
+_Image of the wizbit architechture_ 
+
+* [[Wizbit Store|ArchWizbitStore]] 
+* [[Wizbit/Tracker/RDF Metadata|ArchMetadata]] 
+* [[Wizbit API|ArchAPI]] 

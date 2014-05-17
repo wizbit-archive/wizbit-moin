@@ -1,0 +1,23 @@
+
+Wizbit is nothing without the platform on which its built. So heres some of the stuff we are using to bring the blinding future to your desktop, and how we integrate with it or plan to integrate with it. 
+
+
+## Git
+
+Git is one of the main DVCS systems out there in the free software world. We are using it for Wizbit because it is written in C and is fast. 
+
+We have been refactoring Git to be useful as a library, making things threadsafe, freeing memory and actually giving it an API. 
+
+
+## Conduit
+
+Conduit is a synchronization application for GNOME. It allows you to synchronize your files, photos, emails, contacts, notes, calendar data and any other type of personal information and synchronize that data with another computer, an online service, or even another electronic device. 
+
+Wizbit will use Conduit to synchronise its filestore between machines and devices, and to interoperate with non-wizbit datastores. So rather than roll our own we'll enhance the Conduit code base.  
+
+One thing we are especially excited about is that the file sync will be blazingly fast when its able to exploit wizbits underlying DVCS functionality. 
+
+
+## GVFS
+
+GVFS is the virtual filesystem technology in the latest versions of GNOME. We want nice integration with the GNOME platform, so GVFS is a no-brainer. 

@@ -1,0 +1,11 @@
+
+
+## Why not use Git?
+
+1. No library, and no one seems to be heading in that direction. Sure we (had) libgitcore, but that had its own problems and quickly fell behind git upstream. 
+
+2. Even if Git is refactored in to libgit, we'd still have a GPL library... 
+
+3. Wrong model. We are mostly versioning objections, rather than trees of objects. We don't need tree objects. 
+
+4. Pack (as it stands) isn't right for us. We need something that we can stream to/from - we don't want to have to load multiple versions in to memory, esp for big files. 

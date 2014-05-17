@@ -1,0 +1,53 @@
+
+
+# Ideas
+
+This is a place to put together all the crazy ideas. 
+
+
+## Future structured filesystem
+
+Using uri's like `wizbit://UUID` and `wizbit://UUID#revision` you can use Bits as a subject or object in an RDF graph. 
+
+Below the `virtual://UUID` uris are universal identifiers for virtual objects. 
+
+example: standard hierarchical representation 
+
+
+[[!format txt """
+<virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583> <rdfs:type> <nfo:Folder>
+<virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583> <dc:title> "My Organised Files"
+<wiz://d531c808-b526-4ab6-bdcc-f22cf3324b6b> <nfo:belongsToContainer> <virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583>
+<wiz://d531c808-b526-4ab6-bdcc-f22cf3324b6b> <dc:title> "Document 1"
+
+<wiz://edc42c70-c9c2-498b-a5be-1e45e441ca97> <nfo:belongsToContainer> <virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583>
+<wiz://edc42c70-c9c2-498b-a5be-1e45e441ca97> <dc:title> "Document 2"
+
+<virtual://6a984713-bce4-427c-be25-c891c818b87a> <rdfs:type> <nfo:Folder>
+<virtual://6a984713-bce4-427c-be25-c891c818b87a> <dc:title> "Important Stuff"
+<virtual://6a984713-bce4-427c-be25-c891c818b87a> <nfo:belongsToContainer> <virtual://3494fb7d-7fb9-4dcf-a34f-f968c9e1d583>
+
+<wiz://47aad80d-358a-4ddb-989b-70e9047fdf39> <nfo:belongsToContainer> <virtual://6a984713-bce4-427c-be25-c891c818b87a>
+<wiz://47aad80d-358a-4ddb-989b-70e9047fdf39#deadbeefdeadbeef> <dc:title> "Sales Results"
+<wiz://47aad80d-358a-4ddb-989b-70e9047fdf39#deadbeefdeadbeef> <dc:description> "The sales results on 10/04/08"
+"""]]
+or a in a less concrete and and easier to read form...  
+
+
+[[!format txt """
+<virtual1> <rdfs:type> <nfo:Folder>
+<virtual1> <dc:title> "My Organised Files"
+<wiz1> <nfo:belongsToContainer> <virtual1>
+<wiz1> <dc:title> "Document 1"
+
+<wiz2> <nfo:belongsToContainer> <virtual1>
+<wiz2> <dc:title> "Document 2"
+
+<virtual2> <rdfs:type> <nfo:Folder>
+<virtual2> <dc:title> "Important Stuff"
+<virtual2> <nfo:belongsToContainer> <virtual1>
+
+<wiz3> <nfo:belongsToContainer> <virtual://6a984713-bce4-427c-be25-c891c818b87a>
+<wiz3> <dc:title> "Sales Results"
+<wiz3> <dc:description> "The sales results on 10/04/08"
+"""]]
